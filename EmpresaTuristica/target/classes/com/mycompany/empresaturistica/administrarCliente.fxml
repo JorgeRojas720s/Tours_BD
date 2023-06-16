@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="panelPrincipal" prefHeight="624.0" prefWidth="1030.0" stylesheets="@CSS/Registro.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.empresaturistica.AdministrarClienteController">
+   <children>
+      <AnchorPane id="panelRegistrar" fx:id="panelRegistrar" layoutX="-14.0" prefHeight="634.0" prefWidth="231.0">
+         <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="105.0" prefHeight="73.0" prefWidth="218.0" text="Adiministrar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="178.0" prefHeight="73.0" prefWidth="167.0" text="Cliente" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Button fx:id="BtnRegistrarVolver" layoutX="32.0" layoutY="552.0" mnemonicParsing="false" onAction="#clickVolver" prefHeight="45.0" prefWidth="127.0" text="Volver" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtCedula" layoutX="364.0" layoutY="59.0" prefHeight="32.0" prefWidth="136.0" />
+      <TextField fx:id="txtNombre" layoutX="260.0" layoutY="193.0" />
+      <TextField fx:id="txtPApellido" layoutX="260.0" layoutY="305.0" />
+      <TextField fx:id="txtSApellido" layoutX="482.0" layoutY="305.0" />
+      <TextField fx:id="txtTelefono" layoutX="482.0" layoutY="193.0" />
+      <TextField fx:id="txtCorreo" layoutX="493.0" layoutY="422.0" />
+      <Label layoutX="305.0" layoutY="161.0" text="Nombre" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="273.0" text="Primer Apellido" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="273.0" text="Segundo Apellido" textFill="#fcfcfc">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="526.0" layoutY="161.0" text="Telefono" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="535.0" layoutY="389.0" text="Coreo" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="389.0" text="Fecha de Nacimiento" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="BtnBuscar" layoutX="515.0" layoutY="53.0" mnemonicParsing="false" onAction="#clickBuscar" prefHeight="45.0" prefWidth="127.0" text="Buscar">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="248.0" layoutY="34.0" prefHeight="81.0" prefWidth="127.0" text="Cedula:" textFill="WHITE">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbvListaDeClientes" layoutX="666.0" layoutY="87.0" onMouseClicked="#obtenerIdCliente" prefHeight="533.0" prefWidth="350.0">
+         <columns>
+            <TableColumn fx:id="columID" prefWidth="84.0" text="ID" />
+            <TableColumn fx:id="columNombre" prefWidth="96.0" text="Nombre" />
+            <TableColumn fx:id="columPApellido" prefWidth="89.0" text="1° Apellido" />
+            <TableColumn fx:id="columSApellido" prefWidth="85.0" text="2° Apellido" />
+         </columns>
+      </TableView>
+      <Label layoutX="744.0" layoutY="34.0" text="Lista de Clientes" textFill="WHITE">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Button fx:id="BtnEliminar" layoutX="258.0" layoutY="555.0" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="45.0" prefWidth="127.0" text="Eliminar" />
+      <Button fx:id="BtnModificar" layoutX="515.0" layoutY="555.0" mnemonicParsing="false" onAction="#clickModificar" prefHeight="45.0" prefWidth="127.0" text="Modificar" />
+      <TextField fx:id="txtFecNacimiento" layoutX="260.0" layoutY="422.0" />
+   </children>
+</AnchorPane>

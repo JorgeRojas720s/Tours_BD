@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="panelPrincipal" prefHeight="624.0" prefWidth="1030.0" stylesheets="@CSS/Registro.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.empresaturistica.AdministrarItinerarioController">
+   <children>
+      <AnchorPane id="panelRegistrar" fx:id="panelAdministrar" layoutX="-14.0" prefHeight="634.0" prefWidth="231.0">
+         <children>
+            <Button fx:id="BtnAdministrarVolver" layoutX="32.0" layoutY="552.0" mnemonicParsing="false" onAction="#clickVolver" prefHeight="45.0" prefWidth="127.0" text="Volver" />
+            <Label alignment="CENTER" layoutX="14.0" layoutY="105.0" prefHeight="73.0" prefWidth="208.0" text="Administrar" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="178.0" prefHeight="73.0" prefWidth="167.0" text="Itinerario" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtIdItinerario" layoutX="440.0" layoutY="66.0" prefHeight="35.0" prefWidth="160.0" />
+      <TextField fx:id="txtIdTour" editable="false" layoutX="256.0" layoutY="173.0" />
+      <TextField fx:id="txtLugar" layoutX="549.0" layoutY="173.0" />
+      <Label layoutX="292.0" layoutY="134.0" text="ID Tour" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="604.0" layoutY="134.0" text="Lugar" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="274.0" layoutY="227.0" text="Fecha de Salida" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="561.0" layoutY="227.0" text="Fecha de Regreso" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="566.0" layoutY="363.0" text="Hora de Llegada" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="277.0" layoutY="363.0" text="Hora de Salida" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDuracion" layoutX="408.0" layoutY="330.0" />
+      <Label layoutX="452.0" layoutY="292.0" text="Duracion" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="452.0" text="Descripcion de Actividades" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="BtnEliminar" layoutX="623.0" layoutY="552.0" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="45.0" prefWidth="127.0" text="Eliminar" />
+      <TableView fx:id="tbvListaDeItinerarios" layoutX="760.0" layoutY="64.0" onMouseClicked="#obtenerIdItinerarios" prefHeight="533.0" prefWidth="253.0">
+         <columns>
+            <TableColumn fx:id="columID" prefWidth="115.0" text="ID" />
+            <TableColumn fx:id="columLugar" prefWidth="137.0" text="Lugar" />
+         </columns>
+      </TableView>
+      <Label layoutX="243.0" layoutY="60.0" prefHeight="47.0" prefWidth="231.0" text="ID del Itinerario:" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="786.0" layoutY="25.0" text="Lista de Itinerarios" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHoraSalida" layoutX="255.0" layoutY="399.0" />
+      <TextField fx:id="txtHoraLlegada" layoutX="549.0" layoutY="399.0" />
+      <TextArea fx:id="txaDescpActividades" layoutX="234.0" layoutY="483.0" prefHeight="136.0" prefWidth="378.0" />
+      <Button fx:id="BtnModificar" layoutX="623.0" layoutY="483.0" mnemonicParsing="false" onAction="#clickModificar" prefHeight="45.0" prefWidth="127.0" text="Modificar" />
+      <Button fx:id="BtnBuscar" layoutX="619.0" layoutY="61.0" mnemonicParsing="false" onAction="#clickBuscar" prefHeight="45.0" prefWidth="127.0" text="Buscar" />
+      <TextField fx:id="txtFechaSalida" layoutX="259.0" layoutY="252.0" />
+      <TextField fx:id="txtFechaRegreso" layoutX="545.0" layoutY="252.0" />
+   </children>
+</AnchorPane>

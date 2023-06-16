@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="panelPrincipal" prefHeight="624.0" prefWidth="1030.0" stylesheets="@CSS/Registro.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.empresaturistica.RegistrarTourController">
+   <children>
+      <AnchorPane id="panelRegistrar" fx:id="panelRegistrar" layoutX="-14.0" prefHeight="634.0" prefWidth="231.0">
+         <children>
+            <Button fx:id="BtnRegistrarVolver" layoutX="45.0" layoutY="552.0" mnemonicParsing="false" onAction="#clickVolver" prefHeight="45.0" prefWidth="127.0" text="Volver" />
+            <Label alignment="CENTER" layoutX="32.0" layoutY="105.0" prefHeight="73.0" prefWidth="167.0" text="Registrar" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="178.0" prefHeight="73.0" prefWidth="167.0" text="Tour" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtIdEmpresa" layoutX="507.0" layoutY="66.0" prefHeight="35.0" prefWidth="160.0" />
+      <TextField fx:id="txtIdTour" layoutX="276.0" layoutY="171.0" />
+      <TextField fx:id="txtNombre" layoutX="528.0" layoutY="173.0" />
+      <TextField fx:id="txtCostos" layoutX="280.0" layoutY="265.0" />
+      <TextField fx:id="txtCodigoTPT" layoutX="530.0" layoutY="262.0" />
+      <Label layoutX="311.0" layoutY="134.0" text="ID Tour" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="564.0" layoutY="134.0" text="Nombre" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="313.0" layoutY="227.0" text="Costos" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="570.0" layoutY="228.0" text="Codigo" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="542.0" layoutY="425.0" text="Fecha de Regreso" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <DatePicker fx:id="dtpFecSalida" layoutX="276.0" layoutY="462.0" prefHeight="25.0" prefWidth="153.0" />
+      <DatePicker fx:id="dtpFecRegreso" layoutX="530.0" layoutY="462.0" prefHeight="25.0" prefWidth="156.0" />
+      <Label layoutX="300.0" layoutY="425.0" text="Fecha de Salida" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <TextField fx:id="txtNombreTPT" layoutX="530.0" layoutY="371.0" />
+      <TextField fx:id="txtPais" layoutX="407.0" layoutY="535.0" />
+      <Label layoutX="306.0" layoutY="330.0" text="Tipo de Tour" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="515.0" layoutY="329.0" text="Nombre del Tipo de Tour" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="467.0" layoutY="507.0" text="Pais" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button fx:id="guardarTour" layoutX="614.0" layoutY="552.0" mnemonicParsing="false" onAction="#clickGuardar" prefHeight="45.0" prefWidth="127.0" text="Guardar" />
+      <TableView fx:id="tbvListaDeEmpresas" layoutX="756.0" layoutY="76.0" onMouseClicked="#obtenerIdEmpresas" prefHeight="533.0" prefWidth="261.0">
+        <columns>
+          <TableColumn fx:id="columID" prefWidth="61.0" text="ID" />
+          <TableColumn fx:id="columEmpresa" prefWidth="60.0" text="Empresa" />
+            <TableColumn fx:id="columTelefono" minWidth="0.0" prefWidth="70.0" text="Telefono" />
+            <TableColumn fx:id="columCalificacion" prefWidth="69.0" text="Calificacion" />
+        </columns>
+      </TableView>
+      <Label layoutX="295.0" layoutY="60.0" prefHeight="47.0" prefWidth="199.0" text="ID de la Empresa:" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="765.0" layoutY="30.0" text="Seleccione la Empresa" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combTipoTour" layoutX="276.0" layoutY="371.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

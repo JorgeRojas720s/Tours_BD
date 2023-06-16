@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="panelPrincipal" prefHeight="624.0" prefWidth="1030.0" stylesheets="@CSS/Registro.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.empresaturistica.RegistrarClienteController">
+   <children>
+      <AnchorPane id="panelRegistrar" fx:id="panelRegistrar" layoutX="-14.0" prefHeight="634.0" prefWidth="231.0">
+         <children>
+            <Label alignment="CENTER" layoutX="32.0" layoutY="105.0" prefHeight="73.0" prefWidth="167.0" text="Registrar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="178.0" prefHeight="73.0" prefWidth="167.0" text="Cliente" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Button fx:id="BtnRegistrarVolver" layoutX="32.0" layoutY="552.0" mnemonicParsing="false" onAction="#clickVolver" prefHeight="45.0" prefWidth="127.0" text="Volver" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtCedula" layoutX="352.0" layoutY="195.0" />
+      <TextField fx:id="txtNombre" layoutX="712.0" layoutY="195.0" />
+      <TextField fx:id="txtPApellido" layoutX="352.0" layoutY="303.0" />
+      <TextField fx:id="txtSApellido" layoutX="712.0" layoutY="303.0" />
+      <TextField fx:id="txtTelefono" layoutX="352.0" layoutY="408.0" />
+      <TextField fx:id="txtCorreo" layoutX="712.0" layoutY="409.0" />
+      <DatePicker fx:id="dtpFecNacimiento" layoutX="529.0" layoutY="494.0" />
+      <Label layoutX="392.0" layoutY="160.0" prefHeight="26.0" prefWidth="53.0" text="Cedula" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="758.0" layoutY="159.0" text="Nombre" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="272.0" text="Primer Apellido" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="725.0" layoutY="273.0" text="Segundo Apellido" textFill="#fcfcfc">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="388.0" layoutY="373.0" text="Telefono" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="769.0" layoutY="375.0" text="Coreo" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="545.0" layoutY="465.0" text="Fecha de Nacimiento" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGuardar" layoutX="837.0" layoutY="552.0" mnemonicParsing="false" onAction="#clickGuardar" prefHeight="45.0" prefWidth="127.0" text="Guardar">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="400.0" layoutY="39.0" prefHeight="81.0" prefWidth="485.0" text="Ingrese un Cliente" textFill="WHITE">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
